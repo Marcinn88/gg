@@ -64,6 +64,7 @@
         let name = userName.value;
         const message = userMessage.value;
 
+
         if (message === "" || name === "") {
           return;
         }
@@ -79,6 +80,10 @@
 
       msgForm.addEventListener("submit", (ev) => {
         ev.preventDefault();
+        const date = Date.now()
+        const today = new Date()
+        console.log(date)
+        console.log(today)
         const login = userName.value;
         const contents = userMessage.value;
         if (!!contents.trim() && !!login.trim()) sendUserMessage();
@@ -88,6 +93,8 @@
         if (e.keyCode === 13) {
           sendUserMessage();
         }
+
+
       };
     </script>
   </body>
